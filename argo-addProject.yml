@@ -1,0 +1,12 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: test
+  namespace: argocd
+spec:
+  description: test project # プロジェクトの説明
+  sourceRepos:
+    - "*" # 任意のリポジトリを許可
+  destinations:
+    - namespace: default # デプロイできるnamespace
+      server: https://kubernetes.default.svc # デプロイ先のKubernetesクラスタ

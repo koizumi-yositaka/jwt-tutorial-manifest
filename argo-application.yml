@@ -6,7 +6,7 @@ metadata:
 spec:
   project: test # 関連付けるプロジェクト名
   source:
-    repoURL: https://github.com/nakamasato/fastapi-sample.git # 自分のGitHubアカウントのリポジトリURLに変更すること
+    repoURL: https://github.com/koizumi-yositaka/jwt-tutorial-manifest.git # 自分のGitHubアカウントのリポジトリURLに変更すること
     path: manifest
   destination:
     server: https://kubernetes.default.svc # デフォルトのKubernetesクラスタ
