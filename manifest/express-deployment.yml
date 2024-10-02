@@ -19,3 +19,9 @@ spec:
         imagePullPolicy: Always  # 常に最新のイメージを取得
         ports:
         - containerPort: 5002
+        env:
+          - name: REFRESH_TOKEN_DURATION_MINUTE
+            valueFrom:
+              configMapKeyRef:
+                name: express-config
+                key: REFRESH_TOKEN_DURATION_MINUTE
