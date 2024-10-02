@@ -4,7 +4,7 @@ metadata:
   name: express-app-deployment
   namespace: express  # 名前空間を指定
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: express-app
