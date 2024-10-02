@@ -5,6 +5,7 @@ metadata:
 data:
   PORT: "8080"
   DB_HOST: "db-service"
+  DB_NAME: users
   DB_USER: "admin"
   DB_PASS: test
   JWT_SECRET: "HCujmweMScV3DwZKtrE7RG7sE8bXDjVy"

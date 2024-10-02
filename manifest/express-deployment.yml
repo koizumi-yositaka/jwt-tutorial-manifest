@@ -30,6 +30,11 @@ spec:
               configMapKeyRef:
                 name: express-config
                 key: DB_HOST
+          - name: DB_NAME
+            valueFrom:
+              configMapKeyRef:
+                name: express-config
+                key: DB_NAME
           - name: DB_USER
             valueFrom:
               configMapKeyRef:
