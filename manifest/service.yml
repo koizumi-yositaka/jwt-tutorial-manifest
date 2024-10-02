@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: express-app-service
+spec:
+  selector:
+    app: express-app  # Deploymentのラベルに一致させる
+  ports:
+    - protocol: TCP
+      port: 80       # 外部からアクセスするポート
+      targetPort: 5002  # コンテナがリッスンしているポート
+  type: LoadBalancer  # LoadBalancerを使用して外部に公開

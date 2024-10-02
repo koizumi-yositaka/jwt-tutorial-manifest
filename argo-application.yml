@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sample-app
+  namespace: argocd
+spec:
+  project: test # 関連付けるプロジェクト名
+  source:
+    repoURL: https://github.com/nakamasato/fastapi-sample.git # 自分のGitHubアカウントのリポジトリURLに変更すること
+    path: manifest
+  destination:
+    server: https://kubernetes.default.svc # デフォルトのKubernetesクラスタ
+    namespace: default # デプロイ先のnamespace
+  syncPolicy:
+    automated: {} # 自動デプロイを有効化
