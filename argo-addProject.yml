@@ -10,3 +10,5 @@ spec:
   destinations:
     - namespace: express # デプロイできるnamespace
       server: https://kubernetes.default.svc # デプロイ先のKubernetesクラスタ
+    - namespace: postgres # デプロイできるnamespace
+      server: https://kubernetes.default.svc # デプロイ先のKubernetesクラスタ
