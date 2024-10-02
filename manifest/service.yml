@@ -7,6 +7,6 @@ spec:
     app: express-app  # Deploymentのラベルに一致させる
   ports:
     - protocol: TCP
-      port: 80       # 外部からアクセスするポート
+      port: 80       # 外部からアクセスするポートここい
       targetPort: 5002  # コンテナがリッスンしているポート
   type: LoadBalancer  # LoadBalancerを使用して外部に公開
