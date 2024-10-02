@@ -7,9 +7,9 @@ spec:
   project: test # 関連付けるプロジェクト名
   source:
     repoURL: https://github.com/koizumi-yositaka/jwt-tutorial-manifest.git # 自分のGitHubアカウントのリポジトリURLに変更すること
-    path: manifest
+    path: ./manifest
   destination:
     server: https://kubernetes.default.svc # デフォルトのKubernetesクラスタ
-    namespace: default # デプロイ先のnamespace
+    namespace: express # デプロイ先のnamespace
   syncPolicy:
     automated: {} # 自動デプロイを有効化

@@ -8,5 +8,5 @@ spec:
   sourceRepos:
     - "*" # 任意のリポジトリを許可
   destinations:
-    - namespace: default # デプロイできるnamespace
+    - namespace: express # デプロイできるnamespace
       server: https://kubernetes.default.svc # デプロイ先のKubernetesクラスタ
