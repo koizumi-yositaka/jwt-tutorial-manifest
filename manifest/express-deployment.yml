@@ -4,7 +4,7 @@ metadata:
   name: express-app-deployment
   namespace: express  # 名前空間を指定
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: express-app
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: express-app
-        image: ghcr.io/koizumi-yositaka/jwt-tutorial:dev2
+        image: ghcr.io/koizumi-yositaka/jwt-tutorial:feature-A
         imagePullPolicy: Always  # 常に最新のイメージを取得
         ports:
         - containerPort: 5002
