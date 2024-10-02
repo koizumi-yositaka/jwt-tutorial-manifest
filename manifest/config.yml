@@ -6,6 +6,7 @@ data:
   PORT: "8080"
   DB_HOST: "db-service"
   DB_USER: "admin"
+  DB_PASS: test
   JWT_SECRET: "HCujmweMScV3DwZKtrE7RG7sE8bXDjVy"
   ACCESS_TOKEN_DURATION_MINUTE: "2"
   REFRESH_TOKEN_DURATION_MINUTE: "1440"

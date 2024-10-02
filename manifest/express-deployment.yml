@@ -35,6 +35,11 @@ spec:
               configMapKeyRef:
                 name: express-config
                 key: DB_USER
+          - name: DB_PASS
+            valueFrom:
+              configMapKeyRef:
+                name: express-config
+                key: DB_PASS
           - name: JWT_SECRET
             valueFrom:
               configMapKeyRef:
