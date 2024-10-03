@@ -4,7 +4,7 @@ metadata:
   name: express-app-deployment
   namespace: express  # 名前空間を指定
   annotations:
-    argocd-image-updater.argoproj.io/image-list: ghcr.io/koizumi-yositaka/jwt-tutorial
+    argocd-image-updater.argoproj.io/image-list: ghcr.io/koizumi-yositaka/jwt-tutorial:feature-A
     argocd-image-updater.argoproj.io/ghcr.io/koizumi-yositaka/jwt-tutorial.update-strategy: latest
 spec:
   replicas: 3
