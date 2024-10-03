@@ -5,7 +5,7 @@ metadata:
   namespace: express  # 名前空間を指定
   annotations:
     argocd-image-updater.argoproj.io/image-list: ghcr.io/koizumi-yositaka/jwt-tutorial:feature-A
-    argocd-image-updater.argoproj.io/ghcr.io/koizumi-yositaka/jwt-tutorial.update-strategy: latest
+    argocd-image-updater.argoproj.io/ghcr.io/koizumi-yositaka/jwt-tutorial.update-strategy: semver
 spec:
   replicas: 3
   selector:
