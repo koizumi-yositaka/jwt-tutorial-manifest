@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: sample-app
   namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   project: test # 関連付けるプロジェクト名
   source:
@@ -12,4 +14,6 @@ spec:
     server: https://kubernetes.default.svc # デフォルトのKubernetesクラスタ
     namespace: express # デプロイ先のnamespace
   syncPolicy:
-    automated: {} # 自動デプロイを有効化
+      automated:
+        prune: true
+        selfHeal: true
