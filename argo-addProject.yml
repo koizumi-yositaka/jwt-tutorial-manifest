@@ -12,3 +12,5 @@ spec:
       server: https://kubernetes.default.svc # デプロイ先のKubernetesクラスタ
     - namespace: postgres # デプロイできるnamespace
       server: https://kubernetes.default.svc # デプロイ先のKubernetesクラスタ
+    - namespace: react # デプロイできるnamespace
+      server: https://kubernetes.default.svc # デプロイ先のKubernetesクラスタ
