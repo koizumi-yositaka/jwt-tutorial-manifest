@@ -9,7 +9,7 @@ spec:
   project: test # 関連付けるプロジェクト名
   source:
     repoURL: https://github.com/koizumi-yositaka/jwt-tutorial-manifest.git # 自分のGitHubアカウントのリポジトリURLに変更すること
-    path: ./manifest
+    path: ./manifest/express
   destination:
     server: https://kubernetes.default.svc # デフォルトのKubernetesクラスタ
     namespace: express # デプロイ先のnamespace
@@ -29,7 +29,7 @@ spec:
   project: test # 関連付けるプロジェクト名
   source:
     repoURL: https://github.com/koizumi-yositaka/jwt-tutorial-manifest.git # 自分のGitHubアカウントのリポジトリURLに変更すること
-    path: ./manifest
+    path: ./manifest/react
   destination:
     server: https://kubernetes.default.svc # デフォルトのKubernetesクラスタ
     namespace: react # デプロイ先のnamespace
