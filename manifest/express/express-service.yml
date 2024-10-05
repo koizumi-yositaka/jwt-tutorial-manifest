@@ -10,4 +10,4 @@ spec:
     - protocol: TCP
       port: 80       # 外部からアクセスするポートここい
       targetPort: 5002  # コンテナがリッスンしているポート
-  type: ClusterIP  # LoadBalancerを使用して外部に公開
+  type: LoadBalancer  # LoadBalancerを使用して外部に公開
