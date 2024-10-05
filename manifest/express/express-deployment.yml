@@ -66,3 +66,8 @@ spec:
               configMapKeyRef:
                 name: express-config
                 key: REFRESH_TOKEN_RESET_EXP
+          - name: REFRESH_TOKEN_RESET_EXP
+            valueFrom:
+              configMapKeyRef:
+                name: express-config
+                key: REACT_PORT
