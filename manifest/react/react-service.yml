@@ -9,5 +9,5 @@ spec:
   ports:
     - protocol: TCP
       port: 5000       # 外部からアクセスするポートここい
-      targetPort: 5000  # コンテナがリッスンしているポート
+      targetPort: 80  # コンテナがリッスンしているポート
   type: NodePort  # LoadBalancerを使用して外部に公開
