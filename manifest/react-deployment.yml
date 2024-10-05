@@ -1,7 +1,8 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: react-app
+  name: react-app-deployment
+  namespace: express
 spec:
   replicas: 1
   selector:
