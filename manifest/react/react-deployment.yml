@@ -18,4 +18,4 @@ spec:
         image: ghcr.io/koizumi-yositaka/jwt-react-app:latest
         imagePullPolicy: Always  # 常に最新のイメージを取得
         ports:
-        - containerPort: 5000
+        - containerPort: 80
