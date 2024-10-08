@@ -8,7 +8,7 @@ spec:
     app: react-app  # Deploymentのラベルに一致させる
   ports:
     - protocol: TCP
-      port: 85      # 外部からアクセスするポートここい
+      port: 80      # 外部からアクセスするポートここい
       targetPort: 80  # コンテナがリッスンしているポート
   type: LoadBalancer  # LoadBalancerを使用して外部に公開
 ---
@@ -29,4 +29,4 @@ spec:
           service:
             name: react-app-service
             port:
-              number: 85
+              number: 80
