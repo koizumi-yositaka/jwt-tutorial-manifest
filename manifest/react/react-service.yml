@@ -11,7 +11,7 @@ spec:
       port: 80      # 外部からアクセスするポートここい
       targetPort: 80  # コンテナがリッスンしているポート
       nodePort: 30001
-  type: ClusterIP  
+  type: NodePort  
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
