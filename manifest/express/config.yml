@@ -14,11 +14,4 @@ data:
   REFRESH_TOKEN_NEW_TOKEN: "true"
   REFRESH_TOKEN_RESET_EXP: "false"
   REACT_PORT: "30001"
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: react-config
-  namespace: react
-data:
-  VITE_API_BASE_URL: "http://localhost:80/"
+

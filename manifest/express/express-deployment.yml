@@ -19,7 +19,7 @@ spec:
         image: ghcr.io/koizumi-yositaka/jwt-tutorial:latest
         imagePullPolicy: Always  # 常に最新のイメージを取得
         ports:
-        - containerPort: 5002
+        - containerPort: 8081
         env:
           - name: REFRESH_TOKEN_DURATION_MINUTE
             valueFrom:
