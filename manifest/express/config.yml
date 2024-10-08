@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: express-config
 data:
-  PORT: "8080"
+  PORT: "8081"
   DB_NAME: users
   DB_USER: "admin"
   DB_PASS: "test"
