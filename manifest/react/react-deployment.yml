@@ -14,8 +14,8 @@ spec:
         app: react-app
     spec:
       containers:
-      - name: react-app
-        image: ghcr.io/koizumi-yositaka/jwt-react-app:latest
-        imagePullPolicy: Always  # 常に最新のイメージを取得する
-        ports:
-        - containerPort: 80
+        - name: react-app
+          image: ghcr.io/koizumi-yositaka/jwt-react-app:main11276992134
+          imagePullPolicy: Always # 常に最新のイメージを取得する
+          ports:
+            - containerPort: 80
