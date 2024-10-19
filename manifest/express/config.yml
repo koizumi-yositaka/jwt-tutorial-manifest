@@ -4,14 +4,19 @@ metadata:
   name: express-config
 data:
   PORT: "8081"
-  DB_NAME: users
-  DB_USER: "admin"
-  DB_PASS: "test"
-  DB_HOST: "postgres-service.postgres.svc.cluster.local"
-  JWT_SECRET: "HCujmweMScV3DwZKtrE7RG7sE8bXDjVy"
+  DB_CONN: "mongodb+srv://admin:test@cluster0.zqbeo.mongodb.net/user?retryWrites=true&w=majority&appName=Cluster0"
   ACCESS_TOKEN_DURATION_MINUTE: "2"
   REFRESH_TOKEN_DURATION_MINUTE: "1440"
   REFRESH_TOKEN_NEW_TOKEN: "true"
   REFRESH_TOKEN_RESET_EXP: "false"
   REACT_PORT: "80"
 
+---
+
+apiVersion: v1
+data:
+  JWT_SECRET: "HCujmweMScV3DwZKtrE7RG7sE8bXDjVy"
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: express-secret

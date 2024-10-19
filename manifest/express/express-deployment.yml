@@ -25,26 +25,11 @@ spec:
                 configMapKeyRef:
                   name: express-config
                   key: REFRESH_TOKEN_DURATION_MINUTE
-            - name: DB_HOST
+            - name: DB_CONN
               valueFrom:
                 configMapKeyRef:
                   name: express-config
-                  key: DB_HOST
-            - name: DB_NAME
-              valueFrom:
-                configMapKeyRef:
-                  name: express-config
-                  key: DB_NAME
-            - name: DB_USER
-              valueFrom:
-                configMapKeyRef:
-                  name: express-config
-                  key: DB_USER
-            - name: DB_PASS
-              valueFrom:
-                configMapKeyRef:
-                  name: express-config
-                  key: DB_PASS
+                  key: DB_CONN
             - name: JWT_SECRET
               valueFrom:
                 configMapKeyRef:
