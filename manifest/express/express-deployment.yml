@@ -32,8 +32,8 @@ spec:
                   key: DB_CONN
             - name: JWT_SECRET
               valueFrom:
-                configMapKeyRef:
-                  name: express-config
+                secretKeyRef:
+                  name: express-secret
                   key: JWT_SECRET
             - name: ACCESS_TOKEN_DURATION_MINUTE
               valueFrom:
