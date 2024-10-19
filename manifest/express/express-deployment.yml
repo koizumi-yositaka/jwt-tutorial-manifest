@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: express-app
-          image: ghcr.io/koizumi-yositaka/jwt-tutorial:main11417601890
+          image: ghcr.io/koizumi-yositaka/jwt-tutorial:pr-311419619084
           imagePullPolicy: Always # 常に最新のイメージを取得
           ports:
             - containerPort: 8081
