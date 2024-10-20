@@ -8,3 +8,4 @@ ghcr.io/koizumi-yositaka/jwt-tutorial:pr-3
 ghcr.io/koizumi-yositaka/jwt-tutorial:devlopment
 ghcr.io/koizumi-yositaka/jwt-tutorial:devlopment
 ghcr.io/koizumi-yositaka/jwt-tutorial:devlopment
+ghcr.io/koizumi-yositaka/jwt-tutorial:devlopment
