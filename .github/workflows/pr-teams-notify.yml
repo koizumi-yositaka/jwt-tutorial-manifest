@@ -29,13 +29,7 @@ jobs:
           # JSON データの組み立て
           payload=$(cat <<-EOF
           {
-            "title": "新しい Pull Request が作成されました",
-            "text": "タイトル: $pr_title\n作成者: $pr_author",
-            "sections": [{
-              "activityTitle": "リポジトリ: $repo_name",
-              "activitySubtitle": "[PRを確認する]($pr_url)",
-              "markdown": true
-            }]
+            "title": "新しい Pull Request が作成されました"
           }
           EOF
           )
