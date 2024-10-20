@@ -23,7 +23,7 @@ jobs:
 
           curl -H 'Content-Type: application/json' \
                -d '{
-                    "title": "新しい Pull Request が作成されました",
+                    "title": "新しい Pull Request が作成されました。",
                     "text": "'"$pr_title"' by '"$pr_author"'",
                     "sections": [{
                       "activityTitle": "リポジトリ: '"$repo_name"'",
