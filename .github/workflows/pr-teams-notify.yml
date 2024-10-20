@@ -2,7 +2,7 @@ name: PR Notification to Teams
 
 on:
   pull_request:
-    types: [opened, reopened]  # PR 作成や更新時に実行
+    types: [opened, reopened]
 
 jobs:
   notify-teams:
@@ -16,19 +16,31 @@ jobs:
         env:
           WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
         run: |
+          # 必要な情報を取得
           pr_title="${{ github.event.pull_request.title }}"
           pr_url="${{ github.event.pull_request.html_url }}"
           pr_author="${{ github.event.pull_request.user.login }}"
           repo_name="${{ github.repository }}"
 
-          curl -H 'Content-Type: application/json' \
-               -d '{
-                    "title": "新しい Pull Request が作成されました。",
-                    "text": "'"$pr_title"' by '"$pr_author"'",
-                    "sections": [{
-                      "activityTitle": "リポジトリ: '"$repo_name"'",
-                      "activitySubtitle": "[PRを確認する]('"$pr_url"')",
-                      "markdown": true
-                    }]
-                  }' \
-               $WEBHOOK_URL
+          # 空のフィールドをチェック（エラーを防ぐため）
+          pr_title=${pr_title:-"No Title"}
+          pr_author=${pr_author:-"Unknown Author"}
+
+          # JSON データの組み立て
+          payload=$(cat <<-EOF
+          {
+            "title": "新しい Pull Request が作成されました",
+            "text": "タイトル: $pr_title\n作成者: $pr_author",
+            "sections": [{
+              "activityTitle": "リポジトリ: $repo_name",
+              "activitySubtitle": "[PRを確認する]($pr_url)",
+              "markdown": true
+            }]
+          }
+          EOF
+          )
+
+          # Webhook 送信
+          curl -X POST -H 'Content-Type: application/json' \
+               -d "$payload" \
+               "$WEBHOOK_URL"
