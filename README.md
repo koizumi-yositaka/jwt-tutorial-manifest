@@ -12,3 +12,4 @@ ghcr.io/koizumi-yositaka/jwt-tutorial:devlopment
 ghcr.io/koizumi-yositaka/jwt-tutorial:devlopment
 ghcr.io/koizumi-yositaka/jwt-tutorial:dev
 ghcr.io/koizumi-yositaka/jwt-tutorial:dev
+ghcr.io/koizumi-yositaka/jwt-tutorial:dev
