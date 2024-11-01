@@ -60,7 +60,7 @@ spec:
                 configMapKeyRef:
                   name: express-config
                   key: EXPRESS_PORT
-            - name: EXPRESS_PORT
+            - name: YAHOO_APP_ID
               valueFrom:
                 configMapKeyRef:
                   name: express-config
